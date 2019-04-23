@@ -19,4 +19,4 @@ echo 'ryan ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/100-ryan
 USER_SELF_COPY=~ryan/phlogiston
 cp -R . "${USER_SELF_COPY}"
 chown -R ryan:ryan "${USER_SELF_COPY}"
-su - ryan -s /bin/sh -c "${USER_SELF_COPY}/config-dev-user.sh"
+su - ryan -s /bin/sh -c "cd ${USER_SELF_COPY} && ./config-dev-user.sh"
