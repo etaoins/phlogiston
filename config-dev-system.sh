@@ -14,7 +14,7 @@ update-alternatives --set editor /usr/bin/vim.basic
 
 adduser --shell /usr/bin/fish --disabled-password --gecos "Ryan Cumming" ryan
 usermod -a -G admin ryan
-echo 'ryan ALL=(ALL) NOPASSWD' >> /etc/sudoers
+echo 'ryan ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/100-ryan
 
 cp -R . /home/ryan/phlogiston
 chown -R ryan:ryan /home/ryan/phlogiston
