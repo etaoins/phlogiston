@@ -15,7 +15,7 @@ cd ~/.vim
 git remote set-url origin git@github.com:etaoins/vimrc.git
 cd -
 
-vim +PlugUpdate +qall
+vim +PlugUpdate +qall > /dev/null
 
 git config --global user.name "Ryan Cumming"
 git config --global user.email "etaoins@gmail.com"
