@@ -2,6 +2,10 @@
 
 set -eu
 
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+cp authorized_keys ~/.ssh
+
 mkdir -p ~/.config
 rm -Rf ~/.config/fish || true
 git clone https://github.com/etaoins/fish-config.git ~/.config/fish
@@ -29,7 +33,3 @@ cp local.fish ~/.config/fish
 rustup component add rustfmt
 rustup component add clippy
 cargo install ripgrep
-
-mkdir ~/.ssh
-chmod 700 ~/.ssh
-cp authorized_keys ~/.ssh
