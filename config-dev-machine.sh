@@ -17,7 +17,7 @@ usermod -a -G admin ryan
 echo 'ryan ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/100-ryan
 
 USER_SELF_COPY=~ryan/Code/phlogiston
-mkdir -p $(dirname "$USER_SELF_COPY")
+mkdir -p $(dirname "${USER_SELF_COPY}")
 cp -R . "${USER_SELF_COPY}"
-chown -R ryan:ryan "${USER_SELF_COPY}"
+chown -R ryan:ryan $(dirname "${USER_SELF_COPY}")
 su - ryan -s /bin/sh -c "cd ${USER_SELF_COPY} && ./config-dev-user.sh"
