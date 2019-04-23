@@ -16,5 +16,7 @@ adduser --shell /usr/bin/fish --disabled-password --gecos "Ryan Cumming" ryan
 usermod -a -G admin ryan
 echo 'ryan ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/100-ryan
 
-cp -R . /home/ryan/phlogiston
-chown -R ryan:ryan /home/ryan/phlogiston
+USER_SELF_COPY=~ryan/phlogiston
+cp -R . "${USER_SELF_COPY}"
+chown -R ryan:ryan "${USER_SELF_COPY}"
+su - ryan -s /bin/sh -c "${USER_SELF_COPY}/config-dev-user.sh"

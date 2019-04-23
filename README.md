@@ -4,7 +4,7 @@ Pholgiston is a set of configuration scripts and templates for setting up a mini
 The majority of the configuration comes from [etaoins/vimrc](https://github.com/etaoins/vimrc) and [etaoins/fish-config](https://github.com/etaoins/fish-config).
 
 All scripts assume they're being run from the root of the repository.
-`config-dev-machine.sh` should be run as `root` on an Ubuntu machine to install the required packages and create a `ryan` user.
 `config-dev-user.sh` should be run as a user to set the user's configuration and install Rust.
+`config-dev-machine.sh` should be run as `root` on an Ubuntu machine to install required packages and configure a `ryan` user.
 
 Any secrets such as SSH private keys must be injected separately.
