@@ -9,6 +9,7 @@ cd ~/.config/fish
 git remote set-url origin git@github.com:etaoins/fish-config.git
 cd -
 
+rm -Rf ~/.vim || true
 git clone https://github.com/etaoins/vimrc.git ~/.vim
 cd ~/.vim
 git remote set-url origin git@github.com:etaoins/vimrc.git
