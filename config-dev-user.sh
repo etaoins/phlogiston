@@ -27,9 +27,8 @@ cp local.fish ~/.config/fish
 
 rustup component add rustfmt
 rustup component add clippy
-cargo install rg
+cargo install ripgrep
 
 mkdir ~/.ssh
 chmod 700 ~/.ssh
 cp authorized_keys ~/.ssh
-
