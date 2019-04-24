@@ -2,6 +2,9 @@
 
 set -eu
 
+# Disable our MOTD. It's very verbose and CPU intensive on Ubuntu.
+touch ~/.hushlogin
+
 # Allow logins from trusted private keys
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
