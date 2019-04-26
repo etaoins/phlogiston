@@ -11,14 +11,14 @@ export DEBIAN_FRONTEND=noninteractive
 # Update and install base packages
 apt update
 apt full-upgrade -y
-apt install -y mosh git vim llvm-7 build-essential libz-dev fish
+apt install -y mosh git vim llvm-7 build-essential libz-dev fish docker.io
 
 # Use Vim as root's editor
 update-alternatives --set editor /usr/bin/vim.basic
 
 # Add a `ryan` user using Fish shell and no password
 adduser --shell /usr/bin/fish --disabled-password --gecos "Ryan Cumming" ryan
-usermod -a -G admin ryan
+usermod -a -G admin,docker ryan
 
 # Allow `ryan` to sudo without a password because he doesn't have one
 echo 'ryan ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/100-ryan
