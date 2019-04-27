@@ -2,9 +2,6 @@
 
 set -eu
 
-# We were cloned over HTTPS; make us read/write once we have a private key
-git remote set-url origin git@github.com:etaoins/phlogiston.git
-
 # Don't prompt for package configuration
 export DEBIAN_FRONTEND=noninteractive
 
@@ -12,6 +9,9 @@ export DEBIAN_FRONTEND=noninteractive
 apt update
 apt full-upgrade -y
 apt install -y mosh git vim llvm-7 build-essential libz-dev fish docker.io
+
+# We were cloned over HTTPS; make us read/write once we have a private key
+git remote set-url origin git@github.com:etaoins/phlogiston.git
 
 # Use Vim as root's editor
 update-alternatives --set editor /usr/bin/vim.basic
