@@ -8,7 +8,7 @@ export DEBIAN_FRONTEND=noninteractive
 # Update and install base packages
 apt-get update
 apt-get full-upgrade -y
-apt-get install -y mosh git vim llvm-7 build-essential libz-dev fish docker.io
+apt-get install -y mosh curl sudo git vim llvm-7 build-essential libz-dev fish docker.io
 
 # We were cloned over HTTPS; make us read/write once we have a private key
 git remote set-url origin git@github.com:etaoins/phlogiston.git
