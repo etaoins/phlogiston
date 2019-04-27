@@ -18,7 +18,7 @@ update-alternatives --set editor /usr/bin/vim.basic
 
 # Add a `ryan` user using Fish shell and no password
 adduser --shell /usr/bin/fish --disabled-password --gecos "Ryan Cumming" ryan
-usermod -a -G admin,docker ryan
+usermod -a -G docker ryan
 
 # Allow `ryan` to sudo without a password because he doesn't have one
 echo 'ryan ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/100-ryan
