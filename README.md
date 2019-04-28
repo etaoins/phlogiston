@@ -5,9 +5,9 @@ The majority of the configuration comes from [etaoins/vimrc](https://github.com/
 
 All scripts assume they're being run from the root of the repository.
 `config-dev-user.sh` should be run as a user to set the user's configuration and install Rust.
-`config-dev-machine.sh` should be run as `root` on an Ubuntu machine to install required packages and configure a `ryan` user.
+`config-dev-machine.sh` should be run as `root` on a Debian/Ubuntu machine to install required packages and configure a `ryan` user.
 
-This could be used with an EC2 user data script such as the following:
+This can be used with an EC2 user data script:
 
 ```shell
 #!/bin/sh
@@ -18,3 +18,14 @@ reboot
 ```
 
 Any secrets such as SSH private keys must be injected separately.
+
+## Supported Systems
+
+The following distributions are known to work:
+
+- Ubuntu 18.04 (minimal + EC2 AMI)
+- Ubuntu 19.04 (minimal)
+- Debian Buster (slim)
+
+`make test` will test `config-dev-machine.sh` in Docker for the above distributions.
+There is no automated testing against EC2 but it seems to behave the same as minimal with more preinstalled packages. 
