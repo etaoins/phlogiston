@@ -45,3 +45,6 @@ rustup component add clippy
 
 # Add ripgrep which is needed for Vim's fzf plugin
 cargo install ripgrep
+
+# Add `cargo watch` to check for syntax errors
+cargo install cargo-watch
