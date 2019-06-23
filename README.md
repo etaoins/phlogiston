@@ -14,6 +14,10 @@ This can be used with an EC2 user data script:
 git clone https://github.com/etaoins/phlogiston
 cd phlogiston
 ./config-dev-machine.sh
+
+# Set an instance-specific prompt colour
+su - ryan -c 'set -u fish_color_cwd "#f42"'
+
 reboot
 ```
 
