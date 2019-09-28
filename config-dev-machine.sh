@@ -8,7 +8,7 @@ export DEBIAN_FRONTEND=noninteractive
 # Update and install base packages
 apt-get update
 apt-get full-upgrade -y
-apt-get install -y mosh curl sudo git vim llvm-7 lldb-7 libc6-dbg \
+apt-get install -y mosh curl sudo git vim llvm-8 lldb-8 libc6-dbg \
   build-essential libz-dev fish docker.io
 
 # We were cloned over HTTPS; make us read/write once we have a private key
@@ -25,7 +25,7 @@ usermod -a -G docker ryan
 echo 'ryan ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/100-ryan
 
 # `rust-lldb` expects `lldb` without the version suffix
-update-alternatives --install /usr/bin/lldb lldb /usr/bin/lldb-7 100
+update-alternatives --install /usr/bin/lldb lldb /usr/bin/lldb-8 100
 
 # Make a copy of ourselves in `ryan`'s home directory
 USER_SELF_COPY=~ryan/Code/phlogiston
