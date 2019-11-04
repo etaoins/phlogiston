@@ -39,10 +39,6 @@ curl https://sh.rustup.rs -sSf | sh -s -- -y
 PATH=$PATH:~/.cargo/bin
 cp local.fish ~/.config/fish
 
-# Add some optional Rust components
-rustup component add rustfmt
-rustup component add clippy
-
 # Add ripgrep which is needed for Vim's fzf plugin
 cargo install ripgrep
 
