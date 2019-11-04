@@ -28,7 +28,7 @@ Any secrets such as SSH private keys must be injected separately.
 The following distributions are known to work:
 
 - Ubuntu 18.04 (minimal + EC2 AMI)
-- Ubuntu 19.04 (minimal)
+- Ubuntu 19.10 (minimal)
 - Debian Buster (slim)
 
 `make test` will test `config-dev-machine.sh` in Docker for the above distributions.
