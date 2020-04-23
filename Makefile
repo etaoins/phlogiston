@@ -9,6 +9,6 @@ install:
 
 .PHONY: test
 test:
-	for base in "ubuntu:18.04" "debian:buster" "ubuntu:19.10" ; do \
+	for base in "ubuntu:18.04" "debian:buster" "ubuntu:19.10" "ubuntu:20.04" ; do \
 		docker build --rm --build-arg base=$$base -f test.Dockerfile . ; \
 	done
