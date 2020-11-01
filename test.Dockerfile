@@ -1,4 +1,4 @@
-ARG base=ubuntu:18.04
+ARG base=ubuntu:20.04
 FROM $base
 
 COPY . /root/phlogiston/

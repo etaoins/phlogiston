@@ -27,10 +27,9 @@ Any secrets such as SSH private keys must be injected separately.
 
 The following distributions are known to work:
 
-- Ubuntu 18.04 (minimal + EC2 AMI)
-- Ubuntu 19.10 (minimal)
 - Debian Buster (slim)
-- Ubuntu 20.04 (minimal)
+- Ubuntu 20.04 (minimal + EC2 AMI)
+- Ubuntu 20.10 (minimal)
 
 `make test` will test `config-dev-machine.sh` in Docker for the above distributions.
 There is no automated testing against EC2 but it seems to behave the same as minimal with more preinstalled packages. 
