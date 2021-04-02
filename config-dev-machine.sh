@@ -11,6 +11,9 @@ apt-get full-upgrade -y
 apt-get install -y mosh curl sudo git vim llvm-11 lldb-11 libc6-dbg \
   build-essential libz-dev fish docker.io
 
+# TODO: Work around https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=966574
+apt-get install -y libclang-common-11-dev
+
 # We were cloned over HTTPS; make us read/write once we have a private key
 git remote set-url origin git@github.com:etaoins/phlogiston.git
 
