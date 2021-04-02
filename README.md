@@ -27,7 +27,7 @@ Any secrets such as SSH private keys must be injected separately.
 
 The following distributions are known to work:
 
-- Debian Buster (slim)
+- Debian Bullseye (slim)
 - Ubuntu 20.04 (minimal + EC2 AMI)
 - Ubuntu 20.10 (minimal)
 
